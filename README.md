@@ -17,7 +17,7 @@ Le Morpion est un jeu classique pour deux joueurs. Le but du jeu est d'aligner t
 
 1. Assurez-vous d'avoir Python installé sur votre système.
 2. Clonez ce dépôt ou téléchargez le code source.
-3. Exécutez `main.py` pour lancer le jeu.
+3. Exécutez `main.py` ou dans le fichier `.zip` il y a un fichier `morpion.exe` pour lancer le jeu.
 
 ## Comment jouer
 
