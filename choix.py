@@ -1,9 +1,7 @@
 from main import *
 from random import randint
 
-grid = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
-
-def croix(screen, x, y, screen_width, screen_height):
+def croix(screen, x, y, screen_width, screen_height, grid):
     # Taille de la croix
     cross_size = 50
 
@@ -21,9 +19,7 @@ def croix(screen, x, y, screen_width, screen_height):
         pygame.draw.line(screen, (255, 0, 0), (x_center - cross_size, y_center + cross_size),
                         (x_center + cross_size, y_center - cross_size), 5)
 
-
-
-def rond(screen, screen_width, screen_height):
+def rond(screen, screen_width, screen_height, grid):
     # Taille du rond
     circle_size = 50
 
@@ -47,7 +43,7 @@ def rond(screen, screen_width, screen_height):
         else:
             break
         
-def win():
+def win(grid):
     # Vérification des colonnes
     for i in range(3):
         if grid[0][i] == grid[1][i] == grid[2][i] == 2:
@@ -67,9 +63,15 @@ def win():
         return "Joueur"
     elif grid[0][0] == grid[1][1] == grid[2][2] == 1:
         return "Bot"
+
     if grid[0][2] == grid[1][1] == grid[2][0] == 2:
         return "Joueur"
     elif grid[0][2] == grid[1][1] == grid[2][0] == 1:
         return "Bot"
+    
+    for i in range(3):
+        for j in range(3):
+            if grid[i][j] == 0:
+                return None  # Il y a encore des cases vides, pas de résultat
 
-    return None
+    return "Match nul"
