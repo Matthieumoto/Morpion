@@ -30,7 +30,7 @@ Le Morpion est un jeu classique pour deux joueurs. Le but du jeu est d'aligner t
 ### Mode 2 Joueurs
 
 1. Lancez le jeu en exécutant le fichier principal.
-2. Le jeu démarre en mode 2 joueurs par défaut.
+2. Le premier joueur joue avec le **Clic Gauche** et le deuxième joueur avec le **Clic Droit**.
 3. Chaque joueur, à tour de rôle, peut cliquer sur la case de son choix pour placer son symbole (X ou O).
 4. Le premier joueur à aligner trois de ses symboles horizontalement, verticalement ou en diagonale gagne la partie.
 
